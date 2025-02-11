@@ -7,10 +7,38 @@ import java.util.List;
 
 public class Pokemon {
     private List<AbilitySlot> abilities;
+    private int base_experience;
+    private int weight;
 
-    private Stat stat;
 
 
+
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getBase_experience() {
+        return base_experience;
+    }
+
+    public void setBase_experience(int base_experience) {
+        this.base_experience = base_experience;
+    }
+
+    //    private Stat stat;
+//
+//    public Stat getStat() {
+//        return stat;
+//    }
+//
+//    public void setStat(Stat stat) {
+//        this.stat = stat;
+//    }
 
     // Getters and Setters
     public List<AbilitySlot> getAbilities() {
@@ -76,60 +104,73 @@ class Ability {
     }
 }
 
-class Stat {
-    @JsonProperty("base_stat")
-    private int baseStat;
 
-    @JsonProperty("effort")
-    private int effort;
 
-    @JsonProperty("stat")
-    private StatDetail stat;
 
-    // Getters and Setters
-    public int getBaseStat() {
-        return baseStat;
-    }
 
-    public void setBaseStat(int baseStat) {
-        this.baseStat = baseStat;
-    }
 
-    public int getEffort() {
-        return effort;
-    }
 
-    public void setEffort(int effort) {
-        this.effort = effort;
-    }
 
-    public StatDetail getStat() {
-        return stat;
-    }
 
-    public void setStat(StatDetail stat) {
-        this.stat = stat;
-    }
-}
 
-class StatDetail {
-    private String name;
-    private String url;
 
-    // Getters and Setters
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getUrl() {
-        return url;
-    }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-}
+//class Stat {
+//    @JsonProperty("base_stat")
+//    private int baseStat;
+//
+//    @JsonProperty("effort")
+//    private int effort;
+//
+//    @JsonProperty("stat")
+//    private StatDetail stat;
+//
+//    // Getters and Setters
+//    public int getBaseStat() {
+//        return baseStat;
+//    }
+//
+//    public void setBaseStat(int baseStat) {
+//        this.baseStat = baseStat;
+//    }
+//
+//    public int getEffort() {
+//        return effort;
+//    }
+//
+//    public void setEffort(int effort) {
+//        this.effort = effort;
+//    }
+//
+//    public StatDetail getStat() {
+//        return stat;
+//    }
+//
+//    public void setStat(StatDetail stat) {
+//        this.stat = stat;
+//    }
+//}
+//
+//class StatDetail {
+//    private String name;
+//    private String url;
+//
+//    // Getters and Setters
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getUrl() {
+//        return url;
+//    }
+//
+//    public void setUrl(String url) {
+//        this.url = url;
+//    }
+//}
