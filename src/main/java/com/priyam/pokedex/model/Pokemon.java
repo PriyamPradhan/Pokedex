@@ -8,6 +8,17 @@ import java.util.List;
 public class Pokemon {
     private List<AbilitySlot> abilities;
 
+    private Item item;
+
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
     // Getters and Setters
     public List<AbilitySlot> getAbilities() {
         return abilities;
@@ -16,6 +27,7 @@ public class Pokemon {
     public void setAbilities(List<AbilitySlot> abilities) {
         this.abilities = abilities;
     }
+
 }
 
 class AbilitySlot {
@@ -71,3 +83,20 @@ class Ability {
     }
 }
 
+class Item{
+    private String name;
+    private String url;
+
+
+    public String getName() {
+        return this.name; }
+    public void setName(String name) {
+        this.name = name; }
+
+
+    public String getUrl() {
+        return this.url; }
+    public void setUrl(String url) {
+        this.url = url; }
+
+}
