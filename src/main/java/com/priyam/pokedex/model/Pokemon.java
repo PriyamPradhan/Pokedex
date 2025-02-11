@@ -8,16 +8,9 @@ import java.util.List;
 public class Pokemon {
     private List<AbilitySlot> abilities;
 
-    private Item item;
+    private Stat stat;
 
 
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
 
     // Getters and Setters
     public List<AbilitySlot> getAbilities() {
@@ -83,20 +76,60 @@ class Ability {
     }
 }
 
-class Item{
+class Stat {
+    @JsonProperty("base_stat")
+    private int baseStat;
+
+    @JsonProperty("effort")
+    private int effort;
+
+    @JsonProperty("stat")
+    private StatDetail stat;
+
+    // Getters and Setters
+    public int getBaseStat() {
+        return baseStat;
+    }
+
+    public void setBaseStat(int baseStat) {
+        this.baseStat = baseStat;
+    }
+
+    public int getEffort() {
+        return effort;
+    }
+
+    public void setEffort(int effort) {
+        this.effort = effort;
+    }
+
+    public StatDetail getStat() {
+        return stat;
+    }
+
+    public void setStat(StatDetail stat) {
+        this.stat = stat;
+    }
+}
+
+class StatDetail {
     private String name;
     private String url;
 
-
+    // Getters and Setters
     public String getName() {
-        return this.name; }
-    public void setName(String name) {
-        this.name = name; }
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getUrl() {
-        return this.url; }
-    public void setUrl(String url) {
-        this.url = url; }
+        return url;
+    }
 
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
